@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>Ma3.ma</title>
+
+  <style>
+    body{
+     font-family:  proxima-nova,"Helvetica Neue",Helvetica,Arial,sans-serif;
+     font-size: 18px;
+     background-color:white;
+     
+     
+    }
+    nav{
+      background-color: #8fa52f;
+    
+}
+.display-8{
+  font-weight: 200;
+  font-size: 30px;
+  color: black;
+}
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+
+<nav class="one-edge-shadow
+  navbar navbar-light
+  sticky-top navbar 
+  navbar-expand-lg
+  text-white">
+    <a class="navbar-brand ms-3 text-dark " href="/">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/store">
+            <div class="sheep">
+            <span class="top">
+              <div class="body"></div>
+              <div class="head">
+                <div class="eye one"></div>
+                <div class="eye two"></div>
+                <div class="ear one"></div>
+                <div class="ear two"></div>
+              </div>
+            </span>
+            <div class="legs">
+              <div class="leg"></div>
+              <div class="leg"></div>
+              <div class="leg"></div>
+              <div class="leg"></div>
+            </div>
+          </div>
+        </div>
+        <style>
+          .sheep {
+    
+    display: inline-block;
+    position: relative;
+    right:10px;
+    bottom: 16px;
+    font-size: 7px;
+
+  }
+  .sheep * {
+    transition: transform 0.3s;
+  }
+  .sheep .top {
+    position: relative;
+    top: 0;
+    animation: bob 1s infinite;
+  }
+  .sheep:hover .head {
+    transform: rotate(0deg);
+  }
+  .sheep:hover .head .eye {
+    width: 1.25em;
+    height: 1.25em;
+  }
+  .sheep:hover .head .eye:before {
+    right: 30%;
+  }
+  .sheep:hover .top {
+    animation-play-state: paused;
+  }
+  .sheep .head {
+    display: inline-block;
+    width: 5em;
+    height: 5em;
+    border-radius: 100%;
+    background: #211e21;
+    vertical-align: middle;
+    position: relative;
+    top: 1em;
+    transform: rotate(30deg);
+  }
+  .sheep .head:before {
+    content: '';
+    display: inline-block;
+    width: 80%;
+    height: 50%;
+    background: #211e21;
+    position: absolute;
+    bottom: 0;
+    right: -10%;
+    border-radius: 50% 40%;
+  }
+  .sheep .head:hover .ear.one, .sheep .head:hover .ear.two {
+    transform: rotate(0deg);
+  }
+  .sheep .head .eye {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border-radius: 100%;
+    background: white;
+    position: absolute;
+    overflow: hidden;
+  }
+  .sheep .head .eye:before {
+    content: '';
+    display: inline-block;
+    background: black;
+    width: 50%;
+    height: 50%;
+    border-radius: 100%;
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    transition: all 0.3s;
+  }
+  .sheep .head .eye.one {
+    right: -2%;
+    top: 1.7em;
+  }
+  .sheep .head .eye.two {
+    right: 2.5em;
+    top: 1.7em;
+  }
+  .sheep .head .ear {
+    background: #211e21;
+    width: 50%;
+    height: 30%;
+    border-radius: 100%;
+    position: absolute;
+  }
+  .sheep .head .ear.one {
+    left: -10%;
+    top: 5%;
+    transform: rotate(-30deg);
+  }
+  .sheep .head .ear.two {
+    top: 2%;
+    right: -5%;
+    transform: rotate(20deg);
+  }
+  .sheep .body {
+    display: inline-block;
+    width: 7em;
+    height: 7em;
+    border-radius: 100%;
+    background: white;
+    position: relative;
+    vertical-align: middle;
+    margin-right: -3em;
+  }
+  .sheep .legs {
+    display: inline-block;
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    z-index: -1;
+  }
+  .sheep .legs .leg {
+    display: inline-block;
+    background: black;
+    width: 0.5em;
+    height: 2.5em;
+    margin: 0.2em;
+  }
+  .sheep:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 112%;
+    width: 100%;
+    height: 10%;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0.4);
+  }
+        </style><span class="sr-only">(current)</span></a>
+        </li>
+
+          </ul>
+
+
+
+
+      <ul class=" navbar-nav my-2 my-lg-0">
+
+        <li class="nav-item active">
+          <a class="nav-link" href="/cart">Cart 
+            <span class="badge badge-success">{{request.session.cart.keys|length}}</span>
+            <span class="sr-only">(current)</span></a>
+        </li>
+
+        {% if request.session.customer %}
+        
+        <li class="nav-item active ">
+          <a class="nav-link" href="/orders">Orders<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active ">
+          <a class="nav-link" href="/logout">Logout<span class="sr-only">(current)</span></a>
+        </li>
+        {% else %}
+       
+        <li class="nav-item active">
+          <a class="nav-link" href="/signup">Signup<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/login">Login<span class="sr-only">(current)</span></a>
+        </li>
+        {% endif %}
+
+
+      </ul>
+
+
+    </div>
+  </nav>
+  <!---->
+  {% block content %}{% endblock %}
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    
+    <footer class="footer-section">
+      <div class="container">
+          <div class="footer-cta pt-5 pb-5">
+              <div class="row">
+                  <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                    <a href="https://www.facebook.com/youssef.mouhyeddine.37">
+                         <img src="https://scontent.fcmn3-1.fna.fbcdn.net/v/t39.30808-6/281824157_326850579619658_7666338007427409697_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeF02AhESO_81JlaXYW0pTGX7rAqs3aSJk7usCqzdpImTiYBtr3yrod1PnVlxJ_4Y78XSXVqFbfCUqTrNf7hFLQ8&_nc_ohc=i7bc7y5J-IMAX_09UWM&_nc_ht=scontent.fcmn3-1.fna&oh=00_AT-ZXNTGxwy2UegWWuroDW-uap0AnvD_HBOGNbcoWK0YDA&oe=629887B7" alt="base" style="width:100px">
+                        
+                          <div class="cta-text">
+                              <h1>Youssef</h1>
+                              <span>Mouhyeddine</span>
+                            </a>
+                          </div>
+                      </div>
+                  </div>
+                     
+                  <div class="col-xl-4 col-md-4 mb-30">
+                      <div class="single-cta">
+                        <a href="https://www.facebook.com/sarah.benmessaoud.946">
+                         <img src="https://scontent.fcmn3-1.fna.fbcdn.net/v/t1.6435-9/170535376_891171641719963_6822162487097298519_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEKbt1oOniuFDFtRZE9dQbr8TN0qvO-f27xM3Sq875_bhgNX8I9v8NabJYQoTvIeRI4BP0E-LXqO3G8PG9qcj0K&_nc_ohc=CWB8h3_2QZcAX8Ol8Qw&_nc_ht=scontent.fcmn3-1.fna&oh=00_AT-YTQz8vr3mBSeV6uN4MVW_8XxzJ5SdCdoqeR3BMWbWcg&oe=62BA199A" alt="" style="width:100px">
+                        
+                          <div class="cta-text">
+                              <h1>Sara</h1>
+                              <span>Benmessaoud</span>
+                            </a>
+                          </div>
+                      </div>
+                  </div>
+<div class="col-xl-4 col-md-4 mb-30">
+                      <div class="single-cta">
+                        <a href="https://www.facebook.com/Madkaaa">  
+                         <img src="https://scontent.fcmn3-2.fna.fbcdn.net/v/t39.30808-6/274899470_1884296795102771_3712895915404934308_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_eui2=AeGvRaS8tbvjn8UoEyQAFUHMPjw7z-MeyFY-PDvP4x7IVubSZGLwK89tM7kJICGC5wlGl_9zvaap303n_BGGevoH&_nc_ohc=wT-bvSYNSYgAX-vVlzq&_nc_ht=scontent.fcmn3-2.fna&oh=00_AT8eUWwRA4rvVzhnQmH2ilA3LmmyVxULPR-72g5rqALyuA&oe=6297FA3A" alt="" style="width:100px; height:em;">
+                                                                                                               
+                          <div class="cta-text">
+                              <h1>Zidane</h1>
+                              <span>Moulay</span>
+                          </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        
+      <div class="copyright-area">
+          <div class="container">
+              <div class="row">
+                  <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                      <div class="copyright-text">
+                          <p>Copyright &copy; 2022, All Right Reserved to <a href="/store">Ma3.ma</a></p>
+                      </div>
+                  </div>
+                
+              </div>
+          </div>
+      </div>
+  </footer>
+  <style>
+.footer-section {
+  margin-top: 50px;
+  background: black;
+  position: relative;
+}
+.footer-cta {
+  border-bottom: 1px solid #8fa52f;
+}
+.single-cta img {
+  border-radius:50px;
+  float: left;
+  margin-bottom:20px;
+}
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+.cta-text h1 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  color: #757575;
+  font-size: 25px;
+}
+
+.copyright-area{
+  background: black;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: #8fa52f;
+}
+
+  
+  </style>
+</body>
+
+</html>
