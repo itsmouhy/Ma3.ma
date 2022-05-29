@@ -1,1 +1,1 @@
-web: gunicorn ma3.ma.wsgi --log-file -
+web: gunicorn Eshop.wsgi:application
