@@ -1,1 +1,1 @@
-web: gunicorn mouhysarahzidane.wsgi --log-file -
+web: gunicorn ma3.ma.wsgi --log-file -
